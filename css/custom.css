@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+                                  /* estilo barra de navegación y texto del producto */
+
+                                  header {
+                                    background-color: #283618  ;
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 6px; 
+                                    align-items: center;
+                                  }
+
+                                  h1 {
+                                    /* text-align: center; */
+                                    /* margin-top: 4rem; */
+                                    font-size: 1.7rem;
+                                  }
+
+                                  /* .datos, h1 {
+                                    margin-left: -82px;
+                                     text-align: center; 
+                                  } */
+
+                                 
+ /* estilo breadcrumbs */
+
+                                                                                                            
+
+ .breadcrumbs ul {
+  list-style: none;
+  display: flex;
+  gap: 3px;
+  overflow: hidden;
+  font-size: .9rem;
+
+}
+
+.breadcrumbs ul li a:last-child {
+  color: rgb(164, 158, 158);
+}
+
+
+.breadcrumbs ul li a {
+  text-decoration: none;
+}
+
+.arrow svg {
+  width: 11px;
+  height: 20px;
+  flex-shrink: 0;
+  vertical-align: middle;
+  color: #000000;
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
+}
+
+
+                                                                                                           
+
+
+                                                                                                                                                                                                    /* estilo grid y tarjetas principal */
+
+                                                                                                                                                                                                        .grid-productos, .recommendedCats {
+                                                                                                                                                                                                          display: grid;
+                                                                                                                                                                                                          gap: 1rem;
+                                                                                                                                                                                                          column-gap: 2.3rem;
+                                                                                                                                                                                                          align-items: center;
+                                                                                                                                                                                                          place-content: center;
+                                                                                                                                                                                                          /* border: 3px solid sandybrown; */
+                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                        /* estilo grid y tarjetas secundario */
+
+                                                                                                                                                                                                        .infoHolder {
+                                                                                                                                                                                                          z-index: 111;
+                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                        .imageHolder {
+                                                                                                                                                                                                          overflow: hidden;
+                                                                                                                                                                                                          border: 1px solid rgba(70, 72, 77, 0.188);
+                                                                                                                                                                                                          width: 100%;
+                                                                                                                                                                                                          height: 200px;
+                                                                                                                                                                                                          flex-basis: 120px;
+                                                                                                                                                                                                          
+
+                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                         .styleImage {
+                                                                                                                                                                                                          height: 100%;
+                                                                                                                                                                                                          width: 200px;
+                                                                                                                                                                                                          background-color: bisque;
+                                                                                                                                                                                                          display: block;
+                                                                                                                                                                                                          margin: 0 auto;
+                                                                                                                                                                                                          z-index: 111;
+
+                                                                                                                                                                                                          background-image: url(https://picsum.photos/200/300);
+                                                                                                                                                                                                          object-fit: cover;
+
+                                                                                                                                                                                                          transition: .45s;
+                                                                                                                                                                                            
+
+          }
+
+                                                                                                                                                                                                        .product:hover .styleImage {
+                                                                                                                                                                                                          transform: scale(1.075);
+                                                                                                                                                                                                          transition: .3s;
+                                                                                                                                                                                                        }
+
+                                          /* estilo tarjetas */
+
+                                          .product {
+                                            position: relative;
+                                            display: grid;
+                                            grid-auto-flow: column;
+                                            grid-template-columns: 45% 1fr;
+                                            gap: 1rem;
+                                          }
+
+                                          .product:hover::before {
+                                            transition: all .3s ease-in-out;
+                                            content:"";
+                                            position: absolute;
+                                            border: none;
+                                            width: auto;
+                                            height: calc(100% + 39px);
+                                            padding: 1rem;
+                                            border-radius: 7px;
+                                            right: -15px;
+                                            left: -15px;
+                                            top: -10px;
+                                            box-shadow: 0 2px 8px 4px rgba(93,115,127,.08);
+                                            /* border: 1px solid blue; */
+                                            transition: .3s;
+                                            z-index: 9999;
+                                          }
+
+        
+
+          /* estilo botón */
+
+                                                                                                                                            
+          .btnStyle {
+            font-weight: 400;
+            text-align: center;
+            cursor: pointer;
+            background-color: #000000;
+            font-size: 1rem;
+            padding: 9px;
+            color: #fff;
+            /* border-radius: 0.2143rem; */
+            /* transition: opacity .3s ease; */
+            display: block;
+            height: 39px;
+            width: ;
+            position: absolute;
+            z-index: 999999;
+            top: calc(100% - 39px);
+            left: calc(45% + 1rem);
+          }
+          
+          .product:hover .btnStyle:hover {
+            background-color: #d7b8b8;
+            cursor: pointer;
+          }          
+      
+
+            /* .product:hover  .btnStyle {
+              transition: height .2s ease-in-out;
+              opacity: 1;
+
+             
+
+            }  */
+
+
+                                                                                                                                                
+                                                                                                                                           
+
+         
+         
+
+
+
+           /* paleta search */
+           .rcornersSearcher {
+            display: flex;
+            padding-bottom: 1rem;
+            width: 90%;
+            margin: 0 auto;
+            justify-content: center;
+
+           }
+
+           .rcornersSearcher button {
+            border: none;
+            background-color: #fff;
+
+           }
+
+           #txtSearch0 {
+            flex-basis: 80%;
+            height: 45px;
+            border: none;
+            padding-left: 2.4rem;
+
+           }
+
+           ul {
+            padding-left: 0; !important
+           }
